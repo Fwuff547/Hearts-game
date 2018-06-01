@@ -21,8 +21,7 @@ def value(card):
         return ("error")
 
 def score(card):
-    if card in d.card_score.keys()\
-            :
+    if card in d.card_score.keys():
         return (d.card_score[card])
     else:
         return 0
@@ -50,26 +49,22 @@ def play_card(hand, player, led):
     global deck
     z = True
     while z:
-        x = str(prompt_question("what card do you want to play?", deck))
+        x = str(prompt_question("what card do you want to play?", hand))
         if x[0] == led:
-            if x in hand:
-                y = naming(x)
-                print("player", player, "plays", y)
-                z = False
-                return x
-            else:
-                print("you don't have that card")
+            y = naming(x)
+            print("player", player, "plays", y)
+            z = False
+            return x
+
         else:
             if has_a(hand, led):
                 print("must play a card of the lead suite, i.e.", d.lead[led])
             else:
-                if x in hand:
-                    y = naming(x)
-                    print("player", player, "plays", y)
-                    z = False
-                    return x
-                else:
-                    print("you don't have that card")
+                y = naming(x)
+                print("player", player, "plays", y)
+                z = False
+                return x
+
 
 
 def max_int_in_list(list):
@@ -78,7 +73,7 @@ def max_int_in_list(list):
         for integer in list:
             Blah = False
             for int in list:
-                if abs(integer) < abs(int):
+                if integer < int:
                      Blah = True
             if not Blah:
                 yet = False

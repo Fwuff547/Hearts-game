@@ -40,35 +40,6 @@ for i in range(13):
     del deck_2[random_num]
     w = w-1
 
-print(player_1, "'s hand is:")
-for card in player_1_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_1, "'s score is", player_1_score)
-
-print(player_2, "'s hand is:")
-for card in player_2_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_2, "'s score is", player_2_score)
-
-print(player_3, "'s hand is:")
-for card in player_3_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_3, "'s score is", player_3_score)
-
-print(player_4, "'s hand is:")
-for card in player_4_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_4, "'s score is", player_4_score)
-print(deck_2)
-print(player_1_hand)
-print(player_2_hand)
-print(player_3_hand)
-print(player_4_hand)
-
 turn = 0
 turn_hand = 0
 leader = 0
@@ -144,6 +115,7 @@ for d in range(3):
         player_3_hand.remove(played)
     if turn_hand == player_4_hand:
         player_4_hand.remove(played)
+
     if not played[0] == lead:
         played_cards.append(0)
     else:
@@ -218,32 +190,28 @@ if winner == played_cards[z_player]:
         if z == player_4:
             player_4_score = player_4_score + s
 
-print(player_1, "'s hand is:")
-for card in player_1_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_1, "'s score is", player_1_score)
+# print(player_1, "'s hand is:")
+# for card in player_1_hand:
+#     y = utils.naming(card)
+#     print(y)
+# print(player_1, "'s score is", player_1_score)
+#
+# print(player_2, "'s hand is:")
+# for card in player_2_hand:
+#     y = utils.naming(card)
+#     print(y)
+# print(player_2, "'s score is", player_2_score)
+#
+# print(player_3, "'s hand is:")
+# for card in player_3_hand:
+#     y = utils.naming(card)
+#     print(y)
+# print(player_3, "'s score is", player_3_score)
+#
+# print(player_4, "'s hand is:")
+# for card in player_4_hand:
+#     y = utils.naming(card)
+#     print(y)
+# print(player_4, "'s score is", player_4_score)
 
-print(player_2, "'s hand is:")
-for card in player_2_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_2, "'s score is", player_2_score)
 
-print(player_3, "'s hand is:")
-for card in player_3_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_3, "'s score is", player_3_score)
-
-print(player_4, "'s hand is:")
-for card in player_4_hand:
-    y = utils.naming(card)
-    print(y)
-print(player_4, "'s score is", player_4_score)
-
-
-
-#still has bugs, been play testing it  and fixing as I find mistakes, at the moment it's a single demo round
-#once the round is working smoothly and securely the next step is to make a one round function
-#there is a glitch in the prompt question of the play card, ask swett he was working on it with me but we didn't get it
