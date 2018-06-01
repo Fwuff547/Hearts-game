@@ -1,4 +1,4 @@
-import Hearts_game.card_dictionaries as d
+import hearts_game.card_dictionaries as d
 def naming(card):
     if card in d.card_names.keys():
         return (d.card_names[card])
@@ -50,7 +50,6 @@ def play_card(hand, player, led):
     global deck
     z = True
     while z:
-        print(deck)
         x = str(prompt_question("what card do you want to play?", deck))
         if x[0] == led:
             if x in hand:
