@@ -1,4 +1,4 @@
-import Hearts_game.my_utils as utils
+import hearts_game.my_utils as utils
 import random
 
 
@@ -16,7 +16,8 @@ player_3_score = 0
 player_4_hand = []
 player_4_score = 0
 
-deck_2 = utils.deck
+deck_2 = []
+deck_2.extend(utils.deck)
 
 w = 52
 for i in range(13):
@@ -244,11 +245,3 @@ print(player_4, "'s score is", player_4_score)
 #still has bugs, been play testing it  and fixing as I find mistakes, at the moment it's a single demo round
 #once the round is working smoothly and securely the next step is to make a one round function
 #there is a glitch in the prompt question of the play card, ask swett he was working on it with me but we didn't get it
-
-
-
-
-
-
-
-
