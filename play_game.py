@@ -19,6 +19,8 @@ player_4_score = 0
 deck_2 = []
 deck_2.extend(utils.deck)
 
+
+
 w = 52
 for i in range(13):
     random_num = random.randrange(w)
